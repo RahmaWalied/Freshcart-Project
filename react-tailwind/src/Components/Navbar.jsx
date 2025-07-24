@@ -140,12 +140,42 @@ export default function Navbar() {
         </ul>
 
         {/* Mobile Menu Icon */}
-        <button
-          className="lg:hidden cursor-pointer"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <Menu size={28} /> : <Menu size={28} />}
-        </button>
+       {/* Mobile Icons: Menu + Cart + Heart */}
+<div className="lg:hidden flex items-center space-x-4">
+  {/* Wishlist Icon */}
+  {token && (
+    <Link to="/wishlist" className="relative">
+      <Heart
+        className={`w-5 h-5 hover:animate-wiggle ${
+          wishlist.length > 0 ? "text-red-600 fill-red-600" : "text-red-500"
+        }`}
+      />
+      {wishlist.length > 0 && (
+        <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full">
+          {wishlist.length}
+        </span>
+      )}
+    </Link>
+  )}
+
+  {/* Cart Icon */}
+  {token && (
+    <Link to="/cart" className="relative">
+      <ShoppingCart className="w-5 h-5 text-darkPrimary fill-darkPrimary" />
+      {cart?.products?.length > 0 && (
+        <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs px-1.5 py-0.5 rounded-full">
+          {totalItems}
+        </span>
+      )}
+    </Link>
+  )}
+
+  {/* Toggle Menu Icon */}
+  <button onClick={() => setIsOpen(!isOpen)}>
+    <Menu size={26} />
+  </button>
+</div>
+
       </div>
 
       {/* Mobile Menu Dropdown */}

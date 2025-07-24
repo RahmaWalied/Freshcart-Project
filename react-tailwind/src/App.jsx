@@ -24,7 +24,8 @@ import AllOrders from "./Pages/Home/AllOrders/AllOrders";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import WishlistContextProvider, { WishlistContext } from './Context/WishlistContext';
-import Wishlist from './Pages/Home/WishList/WishList';
+import Wishlist from './Pages/Home/Wishlist/Wishlist';
+
 function App() {
   let routes = createBrowserRouter([
     {
