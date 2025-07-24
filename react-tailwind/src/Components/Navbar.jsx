@@ -12,6 +12,7 @@ import {
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { WishlistContext } from "../Context/WishlistContext";
+import Home from './../Pages/Home/Home';
 
 export default function Navbar() {
   const { wishlist } = useContext(WishlistContext);
@@ -38,9 +39,12 @@ export default function Navbar() {
   </div>
 
   {/* اسم الموقع بجراديانت */}
-  <h1 className="text-2xl font-extrabold tracking-wide bg-gradient-to-r from-primary to-darkPrimary bg-clip-text text-transparent transition-all duration-500 group-hover:brightness-110">
+  <Link to="/">
+   <h1 className="text-2xl font-extrabold tracking-wide bg-gradient-to-r from-primary to-darkPrimary bg-clip-text text-transparent transition-all duration-500 group-hover:brightness-110">
     FreshCart
-  </h1>
+  </h1> 
+  </Link>
+
 </div>
 
 

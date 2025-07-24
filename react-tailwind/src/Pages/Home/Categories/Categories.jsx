@@ -65,8 +65,8 @@ export default function Categories() {
       <div
         className="
           grid
-          grid-cols-2
-          xs:grid-cols-3
+          grid-cols-1
+          xs:grid-cols-
           md:grid-cols-4
           lg:grid-cols-6
           gap-4 sm:gap-5

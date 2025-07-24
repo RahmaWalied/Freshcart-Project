@@ -90,7 +90,7 @@ export default function CheckOut({ totalPrice }) {
 
         <div className="flex gap-4 items-center">
           <span className="font-bold">Total :</span>
-          <span className="text-primary font-semibold">${totalPrice} USD</span>
+          <span className="text-primary font-semibold">${totalPrice} EGP</span>
         </div>
 
         {/* city input */}

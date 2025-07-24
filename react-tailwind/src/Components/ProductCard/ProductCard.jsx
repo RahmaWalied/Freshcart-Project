@@ -95,13 +95,8 @@ export default function ProductCard({ item }) {
       {/* باقي الكارت كما هو */}
       <footer className="py-6 px-5 bg">
         <header>
-          <h2 className="line-clamp-1 text-primary">
-            <Link
-              className="hover:text-orange-500 duration-300"
-              to={`/product/`}
-            >
+          <h2 className="line-clamp-1 text-primary hover:text-orange-500 duration-300">
               {item.title}
-            </Link>
           </h2>
           <h2 className="line-clamp-1 font-semibold my-1">{item.category.name}</h2>
           <div className="text-gray-500 text-sm">
@@ -116,7 +111,7 @@ export default function ProductCard({ item }) {
         </header>
 
         <footer className="flex justify-between mt-2 items-center">
-          <span className="text-primary flex items-center">{item.price}</span>
+          <span className="text-primary flex items-center">{item.price} EGP</span>
           <div className="rating flex gap-2 items-center">
             <span>
               <svg
